@@ -1,0 +1,20 @@
+/**
+ * CONTAINER
+ */
+
+@use "../01-tools/_tools" as tools;
+
+%o-container,
+.o-container {
+	padding-block: 1em;
+
+	@include tools.for-small-desktop-up {
+		max-width: 90%;
+		padding-block: 0;
+		margin: 0 auto;
+	}
+
+	@include tools.for-desktop-up {
+		max-width: 1080px;
+	}
+}
