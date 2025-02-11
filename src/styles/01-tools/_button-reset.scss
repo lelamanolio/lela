@@ -1,0 +1,21 @@
+/**
+ * BUTTON RESET
+ */
+
+// reset button styles
+// Usage:
+// @extend %button-reset;
+
+%button-reset {
+	background-color: transparent;
+	border: none;
+	line-height: normal;
+	-webkit-appearance: none;
+	padding: 0;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		outline: unset;
+	}
+}

@@ -1,0 +1,18 @@
+/**
+ * THEMES
+ */
+
+@use "colors" as colors;
+
+html {
+	--color-main: #{colors.$co-main-color};
+	--color-background: #{colors.$co-white};
+	--color-text: #{colors.$co-black};
+	--color-border: #{colors.$co-black};
+
+	@media (prefers-color-scheme: dark) {
+		--color-background: #{colors.$co-black};
+		--color-text: #{colors.$co-white};
+		--color-border: #{colors.$co-white};
+	}
+}
