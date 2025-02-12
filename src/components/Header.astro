@@ -1,13 +1,13 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import Hamburger from '../components/Hamburger.astro';
-import ThemeIcon from './ThemeIcon.astro';
+import Logo from '../components/Logo.astro';
+import Nav from '../components/Nav.astro';
+import ThemeIcon from '../components/ThemeIcon.astro';
 ---
 
 <header>
-	<nav>
-		<Hamburger />
-		<ThemeIcon />
-		<Navigation />
-	</nav>
+	<a href="/">
+		<Logo color="var(--color-main)" />
+	</a>
+	<Nav />
+	<ThemeIcon />
 </header>

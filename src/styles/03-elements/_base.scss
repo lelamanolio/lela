@@ -12,6 +12,13 @@
 
 html {
 	scroll-behavior: smooth;
+	color: var(--color-text);
+}
+
+html.dark {
+	--color-background: #{settings.$co-black};
+	--color-text: #{settings.$co-white};
+	--color-border: #{settings.$co-white};
 }
 
 body {
