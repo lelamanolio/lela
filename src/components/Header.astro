@@ -1,13 +1,13 @@
 ---
 import Logo from '../components/Logo.astro';
 import Nav from '../components/Nav.astro';
-import ThemeIcon from '../components/ThemeIcon.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 ---
 
-<header>
-	<a href="/">
+<header class="c-header">
+	<a class="c-logo" href="/">
 		<Logo color="var(--color-main)" />
 	</a>
 	<Nav />
-	<ThemeIcon />
+	<ThemeToggle />
 </header>

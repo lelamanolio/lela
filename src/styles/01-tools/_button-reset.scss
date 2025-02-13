@@ -2,11 +2,7 @@
  * BUTTON RESET
  */
 
-// reset button styles
-// Usage:
-// @extend %button-reset;
-
-%button-reset {
+@mixin button-reset {
 	background-color: transparent;
 	border: none;
 	line-height: normal;
