@@ -1,0 +1,27 @@
+.c-header {
+	display: flex;
+	margin-block: 2em;
+}
+
+.c-header__logo {
+	color: var(--color-main);
+	border-bottom: 0;
+	box-shadow: none;
+
+	&:hover {
+		box-shadow: none;
+		color: var(--color-main-dark);
+	}
+}
+
+.c-header__svg {
+	width: 8em;
+}
+
+.c-header__nav {
+	flex-grow: 1;
+	justify-content: end;
+	align-items: center;
+	display: flex;
+	gap: 1em;
+}
