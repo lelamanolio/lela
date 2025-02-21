@@ -2,7 +2,13 @@
 import Base from '../../layouts/Base.astro';
 import MainHeading from '../../components/MainHeading.astro';
 const pageTitle = "Homepage";
+const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }));
 ---
 <Base title={pageTitle}>
-	<MainHeading title="TIL" />
+	<MainHeading title="TILs" />
+	<!-- {allTils} -->
+
+	<ul>
+		{allPosts.map((til: any) => <li><a href={til.url}>{til.frontmatter.title}</a></li>)}
+	</ul>
 </Base>
