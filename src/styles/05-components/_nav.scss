@@ -1,0 +1,17 @@
+@use "../01-tools/_tools" as tools;
+
+.c-nav {
+}
+
+.c-nav__list {
+	@include tools.list-reset;
+
+	display: flex;
+	gap: 0.8em;
+}
+
+.c-nav__item {
+}
+
+.c-nav__link {
+}

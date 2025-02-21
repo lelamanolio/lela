@@ -5,9 +5,11 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 ---
 
 <header class="c-header">
-	<a class="c-logo" href="/">
-		<Logo color="var(--color-main)" />
+	<a class="c-header__logo" href="/">
+		<Logo styleModifier="c-header__svg" />
 	</a>
-	<Nav />
-	<ThemeToggle />
+	<div class="c-header__nav">
+		<Nav />
+		<ThemeToggle />
+	</div>
 </header>
