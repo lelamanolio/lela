@@ -10,10 +10,4 @@ html {
 	--color-background: #{colors.$co-white};
 	--color-text: #{colors.$co-black};
 	--color-border: #{colors.$co-black};
-
-	@media (prefers-color-scheme: dark) {
-		--color-background: #{colors.$co-black};
-		--color-text: #{colors.$co-white};
-		--color-border: #{colors.$co-white};
-	}
 }

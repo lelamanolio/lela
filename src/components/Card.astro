@@ -1,0 +1,16 @@
+---
+const { url, title, lastModified, tags } = Astro.props;
+---
+<article class="c-card">
+	<h3 class="c-card__title">
+		<a href={url}>{title}</a>
+	</h3>
+
+	<p class="c-card__date">Last modified on {lastModified}</p>
+
+	<div class="c-card__tags">
+		<ul class="c-card__list">
+			{tags.map((tag: any) => <li class="c-card__item"><span class="c-card__tag">{tag}</span></li>)}
+		</ul>
+	</div>
+</article>

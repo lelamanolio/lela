@@ -1,14 +1,18 @@
 ---
 import Base from '../../layouts/Base.astro';
 import MainHeading from '../../components/MainHeading.astro';
+import Card from '../../components/Card.astro';
 const pageTitle = "Homepage";
-const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }));
+const tils = Object.values(import.meta.glob('./*.md', { eager: true }));
 ---
 <Base title={pageTitle}>
 	<MainHeading title="TILs" />
-	<!-- {allTils} -->
 
-	<ul>
-		{allPosts.map((til: any) => <li><a href={til.url}>{til.frontmatter.title}</a></li>)}
+	<ul class="u-list-reset">
+		{tils.map((til: any) => <li class="u-mb2"><Card url={til.url} title={til.frontmatter.title} lastModified={til.frontmatter.date} tags={til.frontmatter.tags} /></li>)}
 	</ul>
 </Base>
+
+<script>
+	import "../../scripts/tags.js";
+</script>
