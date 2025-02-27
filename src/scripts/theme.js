@@ -4,7 +4,8 @@ let lsTheme = localStorage?.getItem("theme");
 
 if (lsTheme !== undefined) theme = lsTheme;
 
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+
+if (window.matchMedia("(prefers-color-scheme: dark)").matches && lsTheme === undefined) {
 	theme = "dark";
 
 	document.documentElement.classList.add("dark");
