@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
+import MainHeading from '../../components/MainHeading.astro';
 
 export async function getStaticPaths() {
   const tils = Object.values(import.meta.glob('../til/*.md', { eager: true }));
@@ -20,7 +21,7 @@ const { tag } = Astro.params;
 const { tils } = Astro.props;
 ---
 <Base>
-	<h2>TILs tagged with {tag}</h2>
+	<MainHeading title={`TILs tagged with ${tag}`} />
 
   <ul class="u-list-reset">
 		{tils.map((til: any) => <li class="u-mb2"><Card url={til.url} title={til.frontmatter.title} lastModified={til.frontmatter.date} tags={til.frontmatter.tags} /></li>)}
