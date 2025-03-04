@@ -1,5 +1,6 @@
 @use "../01-tools/_tools" as tools;
 @use "../00-settings/colors" as colors;
+@use "sass:color";
 
 .c-card {
 	border: 0.2em solid var(--color-main);
@@ -36,6 +37,6 @@
 	cursor: pointer;
 
 	&:hover {
-		background-color: darken($color: colors.$co-gray, $amount: 10%);
+		background-color: color.adjust(colors.$co-gray, $lightness: 10%);
 	}
 }
