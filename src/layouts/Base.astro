@@ -18,14 +18,14 @@ import Footer from '../components/Footer.astro';
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="o-main">
+	<Header />
+
 	<main class="o-container">
-		<Header />
-
 		<slot />
-
-		<Footer />
 	</main>
+
+	<Footer />
 
 	<script>
 		import "../scripts/theme.js";
