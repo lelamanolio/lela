@@ -1,28 +1,28 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import BlogPost from '../../components/BlogPost.astro';
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
 
 export async function getStaticPaths() {
-  const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+  const tils = Object.values(import.meta.glob('../til/*.md', { eager: true }));
 
-  const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+  const uniqueTags = [...new Set(tils.map((post: any) => post.frontmatter.tags).flat())];
 
   return uniqueTags.map((tag) => {
-  const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
+  const filteredTils = tils.filter((post: any) => post.frontmatter.tags.includes(tag));
   return {
     params: { tag },
-    props: { posts: filteredPosts },
+    props: { tils: filteredTils },
   };
 });
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { tils } = Astro.props;
 ---
-<BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
+<Base>
+	<h2>TILs tagged with {tag}</h2>
 
-  <ul>
-    {posts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
+  <ul class="u-list-reset">
+		{tils.map((til: any) => <li class="u-mb2"><Card url={til.url} title={til.frontmatter.title} lastModified={til.frontmatter.date} tags={til.frontmatter.tags} /></li>)}
   </ul>
-</BaseLayout>
+</Base>
