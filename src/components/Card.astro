@@ -10,7 +10,7 @@ const { url, title, lastModified, tags } = Astro.props;
 
 	<div class="c-card__tags">
 		<ul class="c-card__list">
-			{tags.map((tag: any) => <li class="c-card__item"><span class="c-card__tag">{tag}</span></li>)}
+			{tags.map((tag: any) => <li class="c-card__item"><a class="c-card__tag" href={`/tags/${tag}`}>{tag}</a></li>)}
 		</ul>
 	</div>
 </article>
