@@ -1,0 +1,12 @@
+/**
+ * MAIN CONTENT
+ */
+
+.o-main {
+	display: flex;
+	flex-direction: column;
+
+	main {
+		flex-grow: 1;
+	}
+}

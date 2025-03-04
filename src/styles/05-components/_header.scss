@@ -2,6 +2,7 @@
 
 .c-header {
 	display: flex;
+	width: 100%;
 
 	@include tools.for-small-desktop-up {
 		margin-block: 2em;
