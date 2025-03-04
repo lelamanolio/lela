@@ -1,11 +1,17 @@
-.c-intro {
-	margin-block-start: 3em;
-	display: flex;
-	gap: 2em;
-	align-items: center;
-}
+@use "../01-tools/_tools" as tools;
 
-.c-intro__desc {
+.c-intro {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	gap: 2em;
+	margin-block: 1.5em;
+
+	@include tools.for-small-desktop-up {
+		flex-direction: row;
+		margin-block-start: 3em;
+		margin-block-end: 0;
+	}
 }
 
 .c-intro__portrait {
