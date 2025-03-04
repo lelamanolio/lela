@@ -1,17 +1,47 @@
 @use "../01-tools/_tools" as tools;
 
 .c-nav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--color-background);
+	padding: 0.8em;
+	border-top: 0.1em solid var(--color-main);
+
+	@include tools.for-small-desktop-up {
+		position: static;
+		border-top: 0;
+		padding: 0;
+	}
 }
 
 .c-nav__list {
 	@include tools.list-reset;
 
 	display: flex;
-	gap: 0.8em;
+	justify-content: center;
+	gap: 2em;
+
+	@include tools.for-small-desktop-up {
+		gap: 0.8em;
+		justify-content: end;
+	}
 }
 
 .c-nav__item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3em;
+	align-items: center;
+
+	@include tools.for-small-desktop-up {
+		display: block;
+	}
 }
 
-.c-nav__link {
+.c-nav__icon {
+	@include tools.for-small-desktop-up {
+		display: none;
+	}
 }
