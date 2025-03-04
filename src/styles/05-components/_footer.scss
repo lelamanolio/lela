@@ -1,5 +1,11 @@
+@use "../01-tools/_tools" as tools;
+
 .c-footer {
 	width: 100%;
 	text-align: center;
-	padding-block: 1em 0.7em;
+	padding-block: 1em 6em;
+
+	@include tools.for-small-desktop-up {
+		padding-block: 1em 0.7em;
+	}
 }
