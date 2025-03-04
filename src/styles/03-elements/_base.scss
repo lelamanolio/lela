@@ -51,3 +51,15 @@ strong {
 em {
 	font-style: italic;
 }
+
+hr {
+	margin-block: 2em;
+	border: 0;
+
+	&::before {
+		content: url(../../../public/divider.svg);
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}
