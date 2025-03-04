@@ -57,9 +57,13 @@ hr {
 	border: 0;
 
 	&::before {
-		content: url(../../../public/divider.svg);
+		content: url(/divider.svg);
 		display: block;
 		width: 100%;
 		text-align: center;
 	}
+}
+
+p {
+	margin-block: 0.8em;
 }
