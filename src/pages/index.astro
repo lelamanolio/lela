@@ -7,6 +7,7 @@ import Introduction from '../components/Introduction.astro';
 const pageTitle = "Homepage";
 
 const tils = Object.values(import.meta.glob('./til/*.md', { eager: true }));
+const lastTils = tils.slice(0, 5);
 ---
 <Base title={pageTitle}>
 	<section>
@@ -17,6 +18,6 @@ const tils = Object.values(import.meta.glob('./til/*.md', { eager: true }));
 
 	<h2>Recent TILs</h2>
 	<ul class="u-list-reset">
-		{tils.map((til: any) => <li class="u-mb2"><Card url={til.url} title={til.frontmatter.title} lastModified={til.frontmatter.date} tags={til.frontmatter.tags} /></li>)}
+		{lastTils.map((til: any) => <li class="u-mb2"><Card url={til.url} title={til.frontmatter.title} lastModified={til.frontmatter.date} tags={til.frontmatter.tags} /></li>)}
 	</ul>
 </Base>
