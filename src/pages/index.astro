@@ -14,7 +14,7 @@ const lastProjects = projects.slice(0, 4);
 		<Introduction />
 	</section>
 
-	<h2>Recent projects</h2>
+	<h2>Stuff I've built</h2>
 	<ul class="u-list-reset o-grid__2-cols">
 		{lastProjects.map((project: any) => <li class="u-mb2"><Card url={project.url} title={project.frontmatter.title} lastModified={project.frontmatter.date} tags={project.frontmatter.tags} /></li>)}
 	</ul>
