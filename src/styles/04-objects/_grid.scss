@@ -1,0 +1,11 @@
+/**
+ * GRIDS
+ */
+
+@use "../00-settings/spacing" as spacing;
+
+.o-grid__2-cols {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(200px, 1fr));
+	gap: spacing.$space-s;
+}
