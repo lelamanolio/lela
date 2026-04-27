@@ -26,3 +26,7 @@ Because why not — frogs are underrated and the app should be nice to look at, 
 
 > **macOS users:** Frogodoro is not a notarized app, so macOS might try to stop you from opening it.  
 > Don't panic — [here's a quick guide to get it running](/projects/tutorials/run-macos-app).
+
+---
+
+GitHub repository: https://github.com/lelamanolio/frogodoro

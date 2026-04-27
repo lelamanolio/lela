@@ -21,3 +21,7 @@ Calm enough for long sessions, readable enough to actually see what you're doing
 It's on the VS Code Marketplace — <a href="https://marketplace.visualstudio.com/items?itemName=lela.midnight-grove" target="_blank" rel="noopener noreferrer">grab it here</a>.
 
 Enjoy coding in the grove. 🌲
+
+---
+
+GitHub repository: https://github.com/lelamanolio/midnight-grove-vstheme
