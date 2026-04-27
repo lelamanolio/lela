@@ -4,6 +4,7 @@
 	width: 100%;
 	text-align: center;
 	padding-block: 1em 6em;
+	margin-top: 1em;
 
 	@include tools.for-small-desktop-up {
 		padding-block: 1em 0.7em;
