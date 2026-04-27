@@ -6,18 +6,16 @@ import Introduction from '../components/Introduction.astro';
 
 const pageTitle = "Homepage";
 
-const tils = Object.values(import.meta.glob('./til/*.md', { eager: true }));
-const lastTils = tils.slice(0, 5);
+const projects = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
+const lastProjects = projects.slice(0, 4);
 ---
 <Base title={pageTitle}>
 	<section>
 		<Introduction />
 	</section>
 
-	<!-- spotify widget tutorial: https://medium.com/@alagappan.dev/create-a-now-playing-widget-using-the-spotify-web-api-in-react-a6cb564ed923 -->
-
-	<h2>Recent TILs</h2>
-	<ul class="u-list-reset">
-		{lastTils.map((til: any) => <li class="u-mb2"><Card url={til.url} title={til.frontmatter.title} lastModified={til.frontmatter.date} tags={til.frontmatter.tags} /></li>)}
+	<h2>Stuff I've built</h2>
+	<ul class="u-list-reset o-grid__2-cols">
+		{lastProjects.map((project: any) => <li class="u-mb2"><Card url={project.url} title={project.frontmatter.title} lastModified={project.frontmatter.date} tags={project.frontmatter.tags} /></li>)}
 	</ul>
 </Base>

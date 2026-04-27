@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import MainHeading from '../../components/MainHeading.astro';
+import Card from '../../components/Card.astro';
+
+const pageTitle = "Projects";
+
+const projects = Object.values(import.meta.glob('../projects/*.md', { eager: true }));
+---
+<Base title={pageTitle}>
+	<MainHeading title="Stuff I've built" />
+
+	<ul class="u-list-reset o-grid__2-cols">
+		{projects.map((project: any) => <li class="u-mb2"><Card url={project.url} title={project.frontmatter.title} lastModified={project.frontmatter.date} tags={project.frontmatter.tags} /></li>)}
+	</ul>
+</Base>

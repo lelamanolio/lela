@@ -1,0 +1,17 @@
+.u-wiggle {
+	display: inline-block;
+	animation: wiggle 0.8s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+	0%,
+	100% {
+		transform: rotate(0deg) translateY(0);
+	}
+	25% {
+		transform: rotate(-6deg) translateY(-2px);
+	}
+	75% {
+		transform: rotate(6deg) translateY(-2px);
+	}
+}

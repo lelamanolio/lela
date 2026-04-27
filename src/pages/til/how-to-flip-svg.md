@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/TilPost.astro
+layout: ../../layouts/Post.astro
 title: "How to flip easily an SVG with CSS"
 date: February 22, 2025
 tags: ["svg", "css"]

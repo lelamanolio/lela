@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/TilPost.astro
+layout: ../../layouts/Post.astro
 title: "How to convert kebab-case into camelCase"
 date: February 22, 2025
 tags: ["js", "regex"]
