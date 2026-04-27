@@ -11,7 +11,9 @@ Most Pomodoro apps want too much from you. An account. A subscription. A project
 
 I just wanted a timer.
 
-![Frogodoro](/projects/frogodoro.png)
+<video width="100%" controls>
+  <source src="/projects/frogodoro.mp4" type="video/mp4">
+</video>
 
 So I built Frogodoro — a free, minimal Pomodoro timer that does exactly what it says and nothing else.  
 No sign-up, no payments, no features you didn't ask for. You open it, you set a timer, you work.

@@ -1,7 +1,8 @@
 @use "../00-settings/spacing" as spacing;
 
 .o-post {
-	img {
+	img,
+	video {
 		margin: 0 auto;
 		border-radius: spacing.$space-s;
 	}
