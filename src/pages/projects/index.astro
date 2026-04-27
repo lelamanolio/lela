@@ -5,10 +5,10 @@ import Card from '../../components/Card.astro';
 
 const pageTitle = "Homepage";
 
-const projects = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
+const projects = Object.values(import.meta.glob('../projects/*.md', { eager: true }));
 ---
 <Base title={pageTitle}>
-	<MainHeading title="Projects" />
+	<MainHeading title="Stuff I've built" />
 
 	<ul class="u-list-reset o-grid__2-cols">
 		{projects.map((project: any) => <li class="u-mb2"><Card url={project.url} title={project.frontmatter.title} lastModified={project.frontmatter.date} tags={project.frontmatter.tags} /></li>)}

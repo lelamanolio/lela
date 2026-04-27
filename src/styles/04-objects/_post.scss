@@ -1,0 +1,8 @@
+@use "../00-settings/spacing" as spacing;
+
+.o-post {
+	img {
+		margin: 0 auto;
+		border-radius: spacing.$space-s;
+	}
+}
